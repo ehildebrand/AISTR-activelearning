@@ -22,7 +22,7 @@ As often happens with IoT devices (coffee machines included), there is a bug in 
 
 ### Make the learner talk to the coffee machine (optional?):
 
-- Use STMLearn, subclass stmlearn.suls.SUL and implement the abstract methods to send inputs and read outputs over telnet.
+- Use STMLearn, subclass stmlearn.suls.SUL (See `RemoteCoffeeMachineSul.py`) and implement the abstract methods to send inputs and read outputs over telnet.
 
 #### Hints: 
 - Use python’s built in telnetlib
