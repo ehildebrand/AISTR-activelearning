@@ -12,6 +12,8 @@ hyp = learner.run(
     # on_hypothesis=lambda _: (print("press enter to continue"), input())
 )
 ```
-to enable showing intermediate hypotheses and enable printing the observation table. The last line you can uncomment to pause after each intermediate hypothesis, however this is not strictly required.
+to enable showing intermediate hypotheses and enable printing the observation table. 
+The last line you can uncomment to pause after each intermediate hypothesis, however this is not strictly required.
 
-Observe the learning process and answer the questions posed in the assignment document.
+Observe the learning process and try to reason about how it works. In the next assignment you will need to answer some questions
+about the learning process, but since this example is small and quick to run it may still help you.

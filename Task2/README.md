@@ -15,6 +15,8 @@ As an example, use netcat `nc 188.166.11.248 31338` to connect to the machine an
 
 See if you can order a coffee!
 
+Besides the questions posed in the assignment text, also include in your report your answers to the questions asked here.
+
 ## Part 1:
 As often happens with IoT devices (coffee machines included), there is a bug in the firmware. In this case, a certain sequence of commands results in an unexpected outcome. Luckily, active state machine learning allows us to retrieve the state machine representing the behavior of the coffee machine in a completely black-box fashion. Once we have this state machine, spotting the bug should be easy.
 
@@ -33,7 +35,7 @@ As often happens with IoT devices (coffee machines included), there is a bug in 
 
 ### Spotting bugs:
 - Learn a state machine of the coffee machine. Include this in your report and indicate where the bug is. Also include how you would fix it. (e.g. what the correct state machine should look like)
-Hints:
+#### Hints:
 - Use a W-method equivalence checker with “m” set to the amount of states you think the state machine should have 
 - Learning shouldn’t take much more than a minute or so
 
