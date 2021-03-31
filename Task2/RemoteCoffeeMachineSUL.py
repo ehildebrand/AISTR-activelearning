@@ -12,13 +12,16 @@ class RemoteCoffeeMachineSUL(SUL):
     # You should make this function return the last
     # output the coffee machine sends back to you
     def process_input(self, inputs: Iterable[str]) -> str:
-        # Implement this
-        raise NotImplementedError()
+        output = ''
+        for i in inputs:
+            self.tn.write((i + '\n').encode('ascii'))
+            bytes = self.tn.read_until('\n'.encode('ascii'))
+            output = bytes.decode('ascii').replace('\n', '')
+        print(output)
+        return output
 
     def reset(self) -> None:
-        # And this
-        raise NotImplementedError()
+        self.tn.write('reset\n'.encode('ascii'))
 
     def get_alphabet(self) -> Iterable[str]:
-        # Also this
-        raise NotImplementedError()
+        return ["choose_capuccino", "choose_black", "pay", "make_coffee"]

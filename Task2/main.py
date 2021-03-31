@@ -18,7 +18,7 @@ sul = DictCache(
 )
 
 # Use the W method equivalence checker
-eqc = WmethodEquivalenceChecker(sul, m=10)
+eqc = WmethodEquivalenceChecker(sul, m=5)
 teacher = Teacher(sul, eqc)
 
 # We are learning a mealy machine using L*
