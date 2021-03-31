@@ -5,8 +5,16 @@ from stmlearn.suls.caches.dictcache import DictCache
 from RemoteCoffeeMachineSUL import RemoteCoffeeMachineSUL
 
 # Connection settings
-host = '188.166.11.248'
-port = 31338
+buggy = False
+
+if buggy:
+    host = '188.166.11.248'
+    port = 31338
+    M = 5
+else:
+    host = '188.166.11.248'
+    port = 31337
+    M = 10
 
 # Since our queries go over the network,
 # they are relatively expensive.
@@ -18,7 +26,7 @@ sul = DictCache(
 )
 
 # Use the W method equivalence checker
-eqc = WmethodEquivalenceChecker(sul, m=5)
+eqc = WmethodEquivalenceChecker(sul, m=M)
 teacher = Teacher(sul, eqc)
 
 # We are learning a mealy machine using L*
